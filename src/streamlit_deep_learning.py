@@ -5,8 +5,8 @@ import torch
 # Load model and tokenizer (only loads once at app startup)
 @st.cache_resource
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("sentiment_model")
-    model = AutoModelForSequenceClassification.from_pretrained("sentiment_model")
+    tokenizer = AutoTokenizer.from_pretrained("../sentiment_model")
+    model = AutoModelForSequenceClassification.from_pretrained("../sentiment_model")
     return tokenizer, model
 
 tokenizer, model = load_model()
